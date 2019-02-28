@@ -1,0 +1,148 @@
+-- phpMyAdmin SQL Dump
+-- version 4.7.7
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Generation Time: Mar 10, 2018 at 01:04 PM
+-- Server version: 5.6.38
+-- PHP Version: 7.2.1
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- Database: `Astro`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL,
+  `username` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  `created_at` datetime DEFAULT CURRENT_TIMESTAMP,
+  `ques1` int(11) DEFAULT NULL,
+  `ques2` int(11) DEFAULT NULL,
+  `ques3` int(11) DEFAULT NULL,
+  `ques4` int(11) DEFAULT NULL,
+  `ques5` int(11) DEFAULT NULL,
+  `ques6` int(11) DEFAULT NULL,
+  `ques7` int(11) DEFAULT NULL,
+  `ques8` int(11) DEFAULT NULL,
+  `ques9` int(11) DEFAULT NULL,
+  `ques10` int(11) DEFAULT NULL,
+  `hint1a` int(11) DEFAULT NULL,
+  `hint1b` int(11) DEFAULT NULL,
+  `hint2a` int(11) DEFAULT NULL,
+  `hint2b` int(11) DEFAULT NULL,
+  `hint3a` int(11) DEFAULT NULL,
+  `hint3b` int(11) DEFAULT NULL,
+  `hint4a` int(11) DEFAULT NULL,
+  `hint4b` int(11) DEFAULT NULL,
+  `hint5a` int(11) DEFAULT NULL,
+  `hint5b` int(11) DEFAULT NULL,
+  `hint6a` int(11) DEFAULT NULL,
+  `hint6b` int(11) DEFAULT NULL,
+  `hint7a` int(11) DEFAULT NULL,
+  `hint7b` int(11) DEFAULT NULL,
+  `hint8a` int(11) DEFAULT NULL,
+  `hint8b` int(11) DEFAULT NULL,
+  `hint9a` int(11) DEFAULT NULL,
+  `hint9b` int(11) DEFAULT NULL,
+  `hint10a` int(11) DEFAULT NULL,
+  `hint10b` int(11) DEFAULT NULL,
+  `currentques` int(11) DEFAULT NULL,
+  `hints_taken` int(11) DEFAULT NULL,
+  `ques1_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `ques2_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `ques3_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `ques4_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `ques5_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `ques6_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `ques7_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `ques8_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `ques9_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `ques10_time` datetime DEFAULT CURRENT_TIMESTAMP,
+  `Q1ans` varchar(1000) NOT NULL,
+  `Q2ans` varchar(1000) NOT NULL,
+  `Q3ans` varchar(1000) NOT NULL,
+  `Q4ans` varchar(1000) NOT NULL,
+  `Q5ans` varchar(1000) NOT NULL,
+  `Q6ans` varchar(1000) NOT NULL,
+  `Q7ans` varchar(1000) NOT NULL,
+  `Q8ans` varchar(1000) NOT NULL,
+  `Q9ans` varchar(1000) NOT NULL,
+  `Q10ans` varchar(1000) NOT NULL,
+  `Score` int(11) NOT NULL,
+  `QBans` varchar(1000) NOT NULL,
+  `QuesB` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `username`, `password`, `created_at`, `ques1`, `ques2`, `ques3`, `ques4`, `ques5`, `ques6`, `ques7`, `ques8`, `ques9`, `ques10`, `hint1a`, `hint1b`, `hint2a`, `hint2b`, `hint3a`, `hint3b`, `hint4a`, `hint4b`, `hint5a`, `hint5b`, `hint6a`, `hint6b`, `hint7a`, `hint7b`, `hint8a`, `hint8b`, `hint9a`, `hint9b`, `hint10a`, `hint10b`, `currentques`, `hints_taken`, `ques1_time`, `ques2_time`, `ques3_time`, `ques4_time`, `ques5_time`, `ques6_time`, `ques7_time`, `ques8_time`, `ques9_time`, `ques10_time`, `Q1ans`, `Q2ans`, `Q3ans`, `Q4ans`, `Q5ans`, `Q6ans`, `Q7ans`, `Q8ans`, `Q9ans`, `Q10ans`, `Score`, `QBans`, `QuesB`) VALUES
+(1, 'aditya', 'Adityas', '2018-03-09 12:13:59', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, NULL, '2018-03-10 11:41:45', '2018-03-09 12:13:59', '2018-03-09 12:13:59', '2018-03-09 12:13:59', '2018-03-09 12:13:59', '2018-03-09 12:13:59', '2018-03-09 12:13:59', '2018-03-09 12:13:59', '2018-03-09 12:13:59', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(2, 'EXPLORER', 'krishna', '2018-03-09 19:17:57', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, NULL, '2018-03-10 10:02:58', '2018-03-10 10:02:59', '2018-03-10 10:03:03', '2018-03-09 19:17:57', '2018-03-09 19:17:57', '2018-03-09 19:17:57', '2018-03-09 19:17:57', '2018-03-09 19:17:57', '2018-03-09 19:17:57', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(3, 'A_N_07', 'aniket', '2018-03-09 19:19:41', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, NULL, '2018-03-09 19:19:41', '2018-03-09 19:19:41', '2018-03-09 19:19:41', '2018-03-09 19:19:41', '2018-03-09 19:19:41', '2018-03-09 19:19:41', '2018-03-09 19:19:41', '2018-03-09 19:19:41', '2018-03-09 19:19:41', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(4, 'STORMBLAZERS', 'ankit', '2018-03-09 19:22:24', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, NULL, '2018-03-09 19:22:24', '2018-03-09 19:22:24', '2018-03-09 19:22:24', '2018-03-09 19:22:24', '2018-03-09 19:22:24', '2018-03-09 19:22:24', '2018-03-09 19:22:24', '2018-03-09 19:22:24', '2018-03-09 19:22:24', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(5, 'NA', 'dhwani', '2018-03-09 19:22:24', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, NULL, '2018-03-09 19:22:24', '2018-03-09 19:22:24', '2018-03-09 19:22:24', '2018-03-09 19:22:24', '2018-03-09 19:22:24', '2018-03-09 19:22:24', '2018-03-09 19:22:24', '2018-03-09 19:22:24', '2018-03-09 19:22:24', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(6, 'ATPP', 'aditya', '2018-03-09 19:24:16', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, NULL, '2018-03-09 19:24:16', '2018-03-09 19:24:16', '2018-03-09 19:24:16', '2018-03-09 19:24:16', '2018-03-09 19:24:16', '2018-03-09 19:24:16', '2018-03-09 19:24:16', '2018-03-09 19:24:16', '2018-03-09 19:24:16', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(7, 'UTTARA', 'abhishek', '2018-03-09 19:24:16', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, NULL, '2018-03-09 19:24:16', '2018-03-09 19:24:16', '2018-03-09 19:24:16', '2018-03-09 19:24:16', '2018-03-09 19:24:16', '2018-03-09 19:24:16', '2018-03-09 19:24:16', '2018-03-09 19:24:16', '2018-03-09 19:24:16', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(8, 'AARONSW', 'rahul', '2018-03-09 19:31:59', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, NULL, '2018-03-09 19:31:59', '2018-03-09 19:31:59', '2018-03-09 19:31:59', '2018-03-09 19:31:59', '2018-03-09 19:31:59', '2018-03-09 19:31:59', '2018-03-09 19:31:59', '2018-03-09 19:31:59', '2018-03-09 19:31:59', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(9, 'BELLATRIX', 'ritwika', '2018-03-09 19:31:59', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, NULL, '2018-03-09 19:31:59', '2018-03-09 19:31:59', '2018-03-09 19:31:59', '2018-03-09 19:31:59', '2018-03-09 19:31:59', '2018-03-09 19:31:59', '2018-03-09 19:31:59', '2018-03-09 19:31:59', '2018-03-09 19:31:59', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(10, 'THE_SERENITY', 'rohan', '2018-03-09 19:34:03', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, NULL, '2018-03-09 19:34:03', '2018-03-09 19:34:03', '2018-03-09 19:34:03', '2018-03-09 19:34:03', '2018-03-09 19:34:03', '2018-03-09 19:34:03', '2018-03-09 19:34:03', '2018-03-09 19:34:03', '2018-03-09 19:34:03', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(11, 'INERTIA', 'jubel', '2018-03-09 19:34:03', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, NULL, '2018-03-09 19:34:03', '2018-03-09 19:34:03', '2018-03-09 19:34:03', '2018-03-09 19:34:03', '2018-03-09 19:34:03', '2018-03-09 19:34:03', '2018-03-09 19:34:03', '2018-03-09 19:34:03', '2018-03-09 19:34:03', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(12, 'SPARK', 'ashmita', '2018-03-09 19:36:53', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, NULL, '2018-03-09 19:36:53', '2018-03-09 19:36:53', '2018-03-09 19:36:53', '2018-03-09 19:36:53', '2018-03-09 19:36:53', '2018-03-09 19:36:53', '2018-03-09 19:36:53', '2018-03-09 19:36:53', '2018-03-09 19:36:53', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(13, 'TARANTULA_CENTAURUS', 'ayush', '2018-03-09 19:36:53', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, NULL, '2018-03-09 19:36:53', '2018-03-09 19:36:53', '2018-03-09 19:36:53', '2018-03-09 19:36:53', '2018-03-09 19:36:53', '2018-03-09 19:36:53', '2018-03-09 19:36:53', '2018-03-09 19:36:53', '2018-03-09 19:36:53', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(14, 'HBTU2', 'deepak', '2018-03-10 13:28:55', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, NULL, '2018-03-10 13:28:55', '2018-03-10 13:28:55', '2018-03-10 13:28:55', '2018-03-10 13:28:55', '2018-03-10 13:28:55', '2018-03-10 13:28:55', '2018-03-10 13:28:55', '2018-03-10 13:28:55', '2018-03-10 13:28:55', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(15, 'ASTROWALKERS', 'ayush', '2018-03-10 13:28:55', 0, 0, 0, 0, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:28:55', '2018-03-10 13:28:55', '2018-03-10 13:28:55', '2018-03-10 13:28:55', '2018-03-10 13:28:55', '2018-03-10 13:28:55', '2018-03-10 13:28:55', '2018-03-10 13:28:55', '2018-03-10 13:28:55', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(16, 'IGNITED', 'yash', '2018-03-10 13:32:48', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:32:48', '2018-03-10 13:32:48', '2018-03-10 13:32:48', '2018-03-10 13:32:48', '2018-03-10 13:32:48', '2018-03-10 13:32:48', '2018-03-10 13:32:48', '2018-03-10 13:32:48', '2018-03-10 13:32:48', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(17, 'SPACE_PIRATES', 'satyarth', '2018-03-10 13:32:48', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:32:48', '2018-03-10 13:32:48', '2018-03-10 13:32:48', '2018-03-10 13:32:48', '2018-03-10 13:32:48', '2018-03-10 13:32:48', '2018-03-10 13:32:48', '2018-03-10 13:32:48', '2018-03-10 13:32:48', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(18, 'SANGHARSH', 'amir', '2018-03-10 13:34:25', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:34:25', '2018-03-10 13:34:25', '2018-03-10 13:34:25', '2018-03-10 13:34:25', '2018-03-10 13:34:25', '2018-03-10 13:34:25', '2018-03-10 13:34:25', '2018-03-10 13:34:25', '2018-03-10 13:34:25', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(19, 'ACES', 'pranjal', '2018-03-10 13:34:25', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:34:25', '2018-03-10 13:34:25', '2018-03-10 13:34:25', '2018-03-10 13:34:25', '2018-03-10 13:34:25', '2018-03-10 13:34:25', '2018-03-10 13:34:25', '2018-03-10 13:34:25', '2018-03-10 13:34:25', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(20, 'LUCID', 'siddhant', '2018-03-10 13:36:56', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:36:56', '2018-03-10 13:36:56', '2018-03-10 13:36:56', '2018-03-10 13:36:56', '2018-03-10 13:36:56', '2018-03-10 13:36:56', '2018-03-10 13:36:56', '2018-03-10 13:36:56', '2018-03-10 13:36:56', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(21, 'ASTROX', 'tarun', '2018-03-10 13:36:56', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:36:56', '2018-03-10 13:36:56', '2018-03-10 13:36:56', '2018-03-10 13:36:56', '2018-03-10 13:36:56', '2018-03-10 13:36:56', '2018-03-10 13:36:56', '2018-03-10 13:36:56', '2018-03-10 13:36:56', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(22, 'AMAZINGSSSS', 'rishabh', '2018-03-10 13:37:53', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:37:53', '2018-03-10 13:37:53', '2018-03-10 13:37:53', '2018-03-10 13:37:53', '2018-03-10 13:37:53', '2018-03-10 13:37:53', '2018-03-10 13:37:53', '2018-03-10 13:37:53', '2018-03-10 13:37:53', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(23, 'DINOCRATS', 'vaibhav', '2018-03-10 13:37:53', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:37:53', '2018-03-10 13:37:53', '2018-03-10 13:37:53', '2018-03-10 13:37:53', '2018-03-10 13:37:53', '2018-03-10 13:37:53', '2018-03-10 13:37:53', '2018-03-10 13:37:53', '2018-03-10 13:37:53', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(24, 'ASTRO_QUIZZERS', 'dhruv', '2018-03-10 13:38:34', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:38:34', '2018-03-10 13:38:34', '2018-03-10 13:38:34', '2018-03-10 13:38:34', '2018-03-10 13:38:34', '2018-03-10 13:38:34', '2018-03-10 13:38:34', '2018-03-10 13:38:34', '2018-03-10 13:38:34', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(25, 'NEBULAE', 'ashish', '2018-03-10 13:38:34', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:38:34', '2018-03-10 13:38:34', '2018-03-10 13:38:34', '2018-03-10 13:38:34', '2018-03-10 13:38:34', '2018-03-10 13:38:34', '2018-03-10 13:38:34', '2018-03-10 13:38:34', '2018-03-10 13:38:34', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(26, 'HBTU_1', 'kartikeya', '2018-03-10 13:39:25', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:39:25', '2018-03-10 13:39:25', '2018-03-10 13:39:25', '2018-03-10 13:39:25', '2018-03-10 13:39:25', '2018-03-10 13:39:25', '2018-03-10 13:39:25', '2018-03-10 13:39:25', '2018-03-10 13:39:25', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(27, 'THE_UNISONS', 'vishal', '2018-03-10 13:39:25', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:39:25', '2018-03-10 13:39:25', '2018-03-10 13:39:25', '2018-03-10 13:39:25', '2018-03-10 13:39:25', '2018-03-10 13:39:25', '2018-03-10 13:39:25', '2018-03-10 13:39:25', '2018-03-10 13:39:25', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(28, 'STARLORDS', 'sarthak', '2018-03-10 13:40:13', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:40:13', '2018-03-10 13:40:13', '2018-03-10 13:40:13', '2018-03-10 13:40:13', '2018-03-10 13:40:13', '2018-03-10 13:40:13', '2018-03-10 13:40:13', '2018-03-10 13:40:13', '2018-03-10 13:40:13', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(29, 'SKY_LORD', 'akshita', '2018-03-10 13:40:13', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:40:13', '2018-03-10 13:40:13', '2018-03-10 13:40:13', '2018-03-10 13:40:13', '2018-03-10 13:40:13', '2018-03-10 13:40:13', '2018-03-10 13:40:13', '2018-03-10 13:40:13', '2018-03-10 13:40:13', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(30, 'NAKSHATRA', 'rahul', '2018-03-10 13:41:02', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:41:02', '2018-03-10 13:41:02', '2018-03-10 13:41:02', '2018-03-10 13:41:02', '2018-03-10 13:41:02', '2018-03-10 13:41:02', '2018-03-10 13:41:02', '2018-03-10 13:41:02', '2018-03-10 13:41:02', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(31, 'TECHNOPHILIA', 'prerna', '2018-03-10 13:41:02', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:41:02', '2018-03-10 13:41:02', '2018-03-10 13:41:02', '2018-03-10 13:41:02', '2018-03-10 13:41:02', '2018-03-10 13:41:02', '2018-03-10 13:41:02', '2018-03-10 13:41:02', '2018-03-10 13:41:02', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(32, 'PANDORA', 'khyati', '2018-03-10 13:41:48', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:41:48', '2018-03-10 13:41:48', '2018-03-10 13:41:48', '2018-03-10 13:41:48', '2018-03-10 13:41:48', '2018-03-10 13:41:48', '2018-03-10 13:41:48', '2018-03-10 13:41:48', '2018-03-10 13:41:48', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(33, 'VINCERES', 'mritunjay', '2018-03-10 13:41:48', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:41:48', '2018-03-10 13:41:48', '2018-03-10 13:41:48', '2018-03-10 13:41:48', '2018-03-10 13:41:48', '2018-03-10 13:41:48', '2018-03-10 13:41:48', '2018-03-10 13:41:48', '2018-03-10 13:41:48', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(34, 'THE_RISING_STAR', 'ashutosh', '2018-03-10 13:47:24', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:47:24', '2018-03-10 13:47:24', '2018-03-10 13:47:24', '2018-03-10 13:47:24', '2018-03-10 13:47:24', '2018-03-10 13:47:24', '2018-03-10 13:47:24', '2018-03-10 13:47:24', '2018-03-10 13:47:24', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(35, 'DX_OFFICIAL', 'divas', '2018-03-10 13:47:24', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:47:24', '2018-03-10 13:47:24', '2018-03-10 13:47:24', '2018-03-10 13:47:24', '2018-03-10 13:47:24', '2018-03-10 13:47:24', '2018-03-10 13:47:24', '2018-03-10 13:47:24', '2018-03-10 13:47:24', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(36, 'NANO_SAIL-D', 'chaganti', '2018-03-10 13:49:02', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:49:02', '2018-03-10 13:49:02', '2018-03-10 13:49:02', '2018-03-10 13:49:02', '2018-03-10 13:49:02', '2018-03-10 13:49:02', '2018-03-10 13:49:02', '2018-03-10 13:49:02', '2018-03-10 13:49:02', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(37, 'ADUITEY', 'aduitey', '2018-03-10 13:49:02', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:49:02', '2018-03-10 13:49:02', '2018-03-10 13:49:02', '2018-03-10 13:49:02', '2018-03-10 13:49:02', '2018-03-10 13:49:02', '2018-03-10 13:49:02', '2018-03-10 13:49:02', '2018-03-10 13:49:02', '', '', '', '', '', '', '', '', '', '', 0, '', 0),
+(38, 'ALPHA', 'karu', '2018-03-10 13:49:37', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, '2018-03-10 13:49:37', '2018-03-10 13:49:37', '2018-03-10 13:49:37', '2018-03-10 13:49:37', '2018-03-10 13:49:37', '2018-03-10 13:49:37', '2018-03-10 13:49:37', '2018-03-10 13:49:37', '2018-03-10 13:49:37', '', '', '', '', '', '', '', '', '', '', 0, '', 0);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;

@@ -1,0 +1,89 @@
+<?php
+require('/vendor/autoload.php');
+ 
+// Define variables and initialize with empty values
+$username = "";
+session_start();
+if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
+  header("location: signin.php");
+  exit;
+}
+// Processing form data when form is submitted
+
+        $username = $_SESSION["username"];
+		$sql = "SELECT currentques FROM users WHERE username = '$username'";
+        //$conn=mysql_select_db('Astro');
+		$retval = mysqli_query($link, $sql);
+		$row = mysqli_fetch_assoc($retval);
+		$currentques = $row["currentques"];
+		//echo($row["password"]);
+		//if($row["password"]!=NULL){
+		//echo("abc");}
+		//echo($sql);
+        //echo($username);
+		//echo($password);
+		if($row["currentques"]==NULL){
+			$currentques=1;
+			$sql2 = "UPDATE users SET currentques = 1 WHERE username = '$username'";
+        //$conn=mysql_select_db('Astro');
+		$retval2 = mysqli_query($link, $sql2);
+		}
+		if($currentques == 1)
+		{
+			$link2 = "Question-1.php";
+		}elseif($currentques == 2 )
+			{
+			$link2 = "Question-2.php";
+		}
+		elseif($currentques == 3){
+			$link2 = "Question-3.php";
+		}elseif($currentques == 4){
+			$link2 = "Question-4.php";
+		}elseif($currentques == 5){
+			$link2 = "Question-5.php";
+		}elseif($currentques == 6){
+			$link2 = "Question-6.php";
+		}elseif($currentques == 7){
+			$link2 = "Question-7.php";
+		}elseif($currentques == 8){
+			$link2 = "Question-8.php";
+		}elseif($currentques == 9){
+			$link2 = "Question-9.php";
+		}elseif(currentques == 10){
+			$link2 = "Question-10.php";
+		}else{
+			echo("ERROR");
+		}
+		
+?>
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<style type="text/css">
+@import url("LeaderBoard.css");
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<body background="home page back ground.jpg">
+<div class="main">
+<div class="navbar">
+  <?php
+Echo("<a href='$link2' class='QuesLink'>Question</a>");
+?>
+  <a href="LeaderBoard.html" class="LeadLink">Leaderboard</a>
+  <img src="LOGO1.png" class="logo"/>
+</div>
+
+
+<div class="content">
+<center>
+
+</center>
+</div>
+</div>
+</body>
+</html>
